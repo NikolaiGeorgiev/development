@@ -6,7 +6,6 @@ public class project {
 		Scanner input = new Scanner(System.in);
 		int dni,i,j,b,broiDeinosti,nomerDeinost,swap;
 		int[] deinost=new int[20];
-		
 		System.out.print("Vuvedi broia na dnite: ");
 		dni=input.nextInt();
 		
@@ -28,7 +27,6 @@ public class project {
 			
 			System.out.print("Vuvedi nomer na deinostta za den "+(i+1)+": ");
 			nomerDeinost=input.nextInt();
-			
 			//proverka na stoinostta na nomera na izbranata deinost
 			while (nomerDeinost<0||nomerDeinost>broiDeinosti){
 				System.out.println("Vuvedi validna stoinost za nomera na deinostta: ");
@@ -39,7 +37,6 @@ public class project {
 			for (j=0;j<broiDeinosti;j++){
 				deinost[j]=input.nextInt();
 			}
-			
 			//proverka na produljitelnostta na deinostite
 			for (b=0;b<broiDeinosti;b++){
 				while (deinost[b]<0){
@@ -60,8 +57,10 @@ public class project {
 					}
 				}
 			}
-			System.out.println("Izbranata deinost za den "+(i+1)+" otnema: "+deinost[nomerDeinost-1]);
+			result[i]=deinost[nomerDeinost-1];
+		}
+		for(i=0;i<dni;i++){
+			System.out.println("Izbranata deinost za den "+(i+1)+" otnema: "+result[i]);
 		}
 	}
-
 }
