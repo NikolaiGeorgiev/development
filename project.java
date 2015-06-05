@@ -14,11 +14,11 @@ public class project {
 			System.out.println("Vuvedi validna stoinost za broya na dnite: ");
 			dni=input.nextInt();
 		}
+		int[] result=new int[dni];
 		
 		for (i=0;i<dni;i++){
 			System.out.print("Vuvedi broia na deinostite za den "+(i+1)+": ");
 			broiDeinosti=input.nextInt();
-			
 			//proverka na validnostta na zadadenata stoinost za broi deinosti
 			while (broiDeinosti<0){
 				System.out.println("Vuvedi validna stoinost za broya na deinostite: ");
